@@ -263,8 +263,10 @@ fieldset.campo { border: 0; margin: 0; padding: 0; }
 .orc .prog { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
 .orc .prog .info { display: flex; justify-content: space-between; gap: 8px; font-size: 12.5px; color: var(--ink-2); }
 .orc .prog .info b { font-family: var(--f-num); font-weight: 600; color: var(--ink); }
-.orc .limite { position: relative; }
-.orc .limite input { height: 36px; text-align: right; font-family: var(--f-num); padding-left: 34px; }
+.orc .limite { position: relative; display: block; min-width: 0; }
+.orc .limite input { display: block; width: 100%; min-width: 0; height: 36px; padding: 0 10px 0 34px; border: 1px solid var(--line-2); border-radius: var(--r-sm); background: var(--surface); color: var(--ink); text-align: right; font-family: var(--f-num); font-size: 14px; }
+.orc .limite input::placeholder { color: var(--muted); font-family: var(--f-ui); font-size: 13px; }
+.orc .limite input:focus { outline: 2px solid color-mix(in srgb, var(--accent) 55%, transparent); outline-offset: 0; border-color: var(--accent); }
 .orc .limite::before { content: 'R$'; position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--muted); font-family: var(--f-num); font-size: 13px; }
 @media (max-width: 620px) { .orc { grid-template-columns: minmax(0, 1fr) 118px; } .orc .prog { grid-column: 1 / -1; grid-row: 2; } }
 
